@@ -1,0 +1,3 @@
+今天天气晴朗
+new day
+hello world
