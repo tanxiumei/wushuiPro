@@ -11,7 +11,6 @@ conn = MySQLdb.connect(
     port=3306,
     db='testing_db'
 )
-
 #读取Excel文件，获取里面的内容
 def get_excel_Data():
     filename = 'db_data.xlsx'
