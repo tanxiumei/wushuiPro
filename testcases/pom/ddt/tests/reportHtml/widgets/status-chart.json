@@ -1,0 +1,31 @@
+[ {
+  "uid" : "1fb6744a9b813eaf",
+  "name" : "test_1",
+  "time" : {
+    "start" : 1603085206941,
+    "stop" : 1603085206942,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d3e78f47d0bb914",
+  "name" : "test_2",
+  "time" : {
+    "start" : 1603085206945,
+    "stop" : 1603085206945,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4a1ce3a2e2f2a5d0",
+  "name" : "test_admin_login[tanxiumei-111111-南通智能污水处理站监控系统]",
+  "time" : {
+    "start" : 1603086747927,
+    "stop" : 1603086755153,
+    "duration" : 7226
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

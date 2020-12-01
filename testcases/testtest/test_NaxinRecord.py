@@ -10,22 +10,26 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 import unittest
 import pytest
+import sys
 
 from testcases.basic.naxin_user_login import NaxinUserLogin
 
 
 class TestNaxinRecord(object):
 
+    #查询运维记录列表内容
     def test_recordList(self,userlogin):
         self.login = userlogin
         print("111")
         sleep(3)
         self.login.driver.find_element_by_id('/recordmanage').click()
         sleep(3)
-        a = self.login.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[1]/div[2]/div/div[2]/div[1]/div[2]/table/thead/tr/th[1]')
-        print(a.text)
-        assert a.text=="序号"
+        for i in range(8):
+            a = self.login.driver.find_element_by_css_selector('thead tr th:nth-child('+str(i+1)+')')
+            print(a.text)
+            #assert a.text=="序号"
 
+    #查询运维记录列表1
     #@pytest.mark.skip(reason="调试")
     def test_recordList1(self,userlogin):
         self.login = userlogin
@@ -56,7 +60,39 @@ class TestNaxinRecord(object):
             list3 = []
         print(list2)
         assert len(list2) != []
+    #临时的test
+    def test_temp(self):
+        import sys
+        path = sys.path[1]
+        path2 = path+r"\wushuiPro\util\weihu.xls"
+        print(path2)
+        #'.el-table__body-wrapper tbody tr:first-child>td:last-child button:nth-child(1)'
 
+    @pytest.mark.skip(reason="调试")
+    def test_operate(self,userlogin):
+        self.login = userlogin
+        self.login.driver.refresh()
+        sleep(2)
+        self.login.driver.find_element_by_id('/recordmanage').click()
+        sleep(1)
+        #打印
+        pp = self.login.driver.find_element_by_css_selector('.el-table__body-wrapper tbody tr:first-child>td:last-child button:nth-child(1)')
+        assert pp.text == "打印"
+        #详情
+        self.login.driver.find_element_by_css_selector(
+            '.el-table__body-wrapper tbody tr:first-child>td:last-child button:nth-child(2)').click()
+        sleep(1)
+        self.login.driver.find_element_by_css_selector('.dialog-footer button').click()
+        sleep(1)
+        #删除
+        self.login.driver.find_element_by_css_selector(
+            '.el-table__body-wrapper tbody tr:first-child>td:last-child button:nth-child(3)').click()
+        sleep(1)
+        self.login.driver.find_element_by_css_selector('.el-message-box__btns button:nth-child(2)').click()#确认删除
+        sleep(1)
+
+
+    #查询功能
     #@pytest.mark.skip(reason="调试")
     def test_recordChaxun(self,userlogin):
         self.login = userlogin
@@ -64,14 +100,36 @@ class TestNaxinRecord(object):
         sleep(2)
         self.login.driver.find_element_by_id('/recordmanage').click()
         sleep(1)
+        #选择维护记录类型
+        self.login.driver.find_element_by_css_selector('.el-form.el-form--inline>div:nth-child(1)').click()
+        sleep(1)
+        self.login.driver.find_element_by_css_selector('#app~div.el-select-dropdown.el-popper ul li:nth-child(1)').click()#选中第一个
+        sleep(1)
+        #请选择运维人员
+        self.login.driver.find_element_by_css_selector('.el-form.el-form--inline>div:nth-child(2)').click()
+        sleep(1)
+        self.login.driver.find_element_by_css_selector('body>div[x-placement] ul>li:nth-child(2)').click()#选中第一个人
+        sleep(1)
         # 选择日期
-        self.login.driver.find_element_by_xpath(
-            '//*[@id="app"]/div/div[2]/div[1]/div[2]/div/div[1]/form/div[3]/div/div/input').send_keys('2020-09-01')
-        a = self.login.driver.find_element_by_xpath(
-            '//*[@id="app"]/div/div[2]/div[1]/div[2]/div/div[1]/form/div[5]/div/div/input').send_keys('2020-09-30')
+        self.login.driver.find_element_by_css_selector('.el-form.el-form--inline>div:nth-child(3) input').send_keys('2020-9-10')
+        self.login.driver.find_element_by_css_selector('.el-form.el-form--inline>div:nth-child(5) input').send_keys('2020-9-12')
         sleep(1)
         self.login.driver.find_element_by_id('/recordmanage').click()
-        assert "详情" in self.login.driver.page_source
+        #重置按钮
+        self.login.driver.find_element_by_css_selector('.el-form.el-form--inline>div:nth-child(6)').click()
+        sleep(1)
+        #导入功能
+        root_path = sys.path[1]
+        xls_path = root_path + r"\wushuiPro\util\weihu.xls"
+        print(xls_path)
+        self.login.driver.find_element_by_css_selector('.el-form.el-form--inline>div:nth-child(7)').click()
+        sleep(1)
+        self.login.driver.find_element_by_name('file').send_keys(xls_path)
+        sleep(1)
+        #导出功能
+        self.login.driver.find_element_by_css_selector('.el-form.el-form--inline>div:nth-child(8)').click()
+        sleep(1)
+       # assert "详情" in self.login.driver.page_source
         sleep(1)
 
 if __name__ == '__main__':

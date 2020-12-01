@@ -37,6 +37,6 @@ class TestEditPage():
 if __name__ == '__main__':
     # 注意生成测试报告 必须在命令行执行
 
-    # pytest --alluredir reports testcase/pytest/test6.py
-    # allure serve ./reports
+    # pytest --alluredir=report/  test6.py
+    # allure generate report/ -o reportHtml --clean  #--clean用于在运行之前清空reportHtml目录。
     pytest.main(['--alluredir', './reports', '05 pytest allure生成测试报告.py'])

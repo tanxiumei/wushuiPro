@@ -1,4 +1,4 @@
-# python3.6.5
+ # python3.6.5
 # 需要引入requests包 ：运行终端->进入python/Scripts ->输入：pip install requests
 from lib.ShowapiRequest import ShowapiRequest
 

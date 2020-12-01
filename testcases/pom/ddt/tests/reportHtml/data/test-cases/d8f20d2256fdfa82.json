@@ -1,0 +1,110 @@
+{
+  "uid" : "d8f20d2256fdfa82",
+  "name" : "test_admin_login[tanxiumei-111111-南通智能污水处理站监控系统]",
+  "fullName" : "test_naxinUser.TestnaxinUserLogin#test_admin_login",
+  "historyId" : "e2c31222db45946be31cd34d8ad3bfe7",
+  "time" : {
+    "start" : 1603085199655,
+    "stop" : 1603085206932,
+    "duration" : 7277
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1603085193607,
+      "stop" : 1603085199654,
+      "duration" : 6047
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1603085193523,
+      "stop" : 1603085193607,
+      "duration" : 84
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1603085206934,
+      "stop" : 1603085206934,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "这是登录的测试用例"
+  }, {
+    "name" : "feature",
+    "value" : "登录页面"
+  }, {
+    "name" : "suite",
+    "value" : "test_naxinUser"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestnaxinUserLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-DOFDDI8"
+  }, {
+    "name" : "thread",
+    "value" : "18772-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_naxinUser"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected",
+    "value" : "'南通智能污水处理站监控系统'"
+  }, {
+    "name" : "pwd",
+    "value" : "'111111'"
+  }, {
+    "name" : "username",
+    "value" : "'tanxiumei'"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d8f20d2256fdfa82.json",
+  "parameterValues" : [ "'南通智能污水处理站监控系统'", "'111111'", "'tanxiumei'" ]
+}

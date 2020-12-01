@@ -69,14 +69,28 @@ class TestNaxinStatus(object):
         sleep(3)
         self.login.driver.find_element_by_id('/devicemanage').click()
         sleep(1)
-        self.login.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[1]/div[2]/div/div[2]/div[1]/div[1]/div/div[2]/div[1]/div').click()
+        self.login.driver.find_element_by_css_selector(
+            '.app-page-select+div .el-row>div:nth-child(1) .viewdetail').click()
+        sleep(1)
+        self.login.driver.find_element_by_css_selector('.app-wrapper .deleft button:nth-of-type(1)').click()
+        sleep(1)
+        assert "设备名称" in self.login.driver.page_source
+
+
+        """
+        self.login = userlogin
+        sleep(3)
+        self.login.driver.find_element_by_id('/devicemanage').click()
+        sleep(1)
+        self.login.driver.find_element_by_css_selector('.app-page-select+div .el-row>div:nth-child(1) .viewdetail').click()
         windows = self.login.driver.window_handles
         self.login.driver.switch_to.window(windows[-1])
         #assert "设备详情" in self.login.driver.page_source
         assert "设备名称" in self.login.driver.page_source
         sleep(5)
         self.login.driver.back()
-
+     """
+"""
    # @pytest.mark.skip(reason="调试")
     @pytest.mark.parametrize('list2',getData())
     def test_AddUser(self,userlogin,list2):
@@ -179,8 +193,6 @@ class TestNaxinStatus(object):
         print(weixiuNum)
         #self.login.driver.find_element_by_xpath('/html/body/div[5]/div[1]/div[1]/ul/li['+str(weixiuNum)+']').click()
         sleep(3)
-
-        """
         #提交成功之后，获取页面提示框信息
         loc = (By.CLASS_NAME,'el-message--success')
         WebDriverWait(self.login.driver,3).until(EC.visibility_of_element_located(loc))
@@ -189,6 +201,7 @@ class TestNaxinStatus(object):
         print("保存成功！")
         assert msg == "保存成功！"
         assert username in self.login.driver.page_source
+
         """
 if __name__ == '__main__':
     pytest.main(['-sv','test_NaxinStatus.py'])

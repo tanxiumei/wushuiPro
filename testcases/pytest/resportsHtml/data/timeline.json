@@ -1,0 +1,37 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-DOFDDI8",
+    "children" : [ {
+      "name" : "11732-MainThread",
+      "children" : [ {
+        "name" : "test_1",
+        "uid" : "ccd4e52d12deb33c",
+        "parentUid" : "d8cc9bb381a3c0e22cc84011d24f3755",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603348536720,
+          "stop" : 1603348536721,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_2",
+        "uid" : "b64d6d1d3c61c431",
+        "parentUid" : "d8cc9bb381a3c0e22cc84011d24f3755",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603348536723,
+          "stop" : 1603348536723,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d8cc9bb381a3c0e22cc84011d24f3755"
+    } ],
+    "uid" : "79bf919373968851421e6c3eb1c35c2e"
+  } ]
+}

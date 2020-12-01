@@ -1,0 +1,53 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-DOFDDI8",
+    "children" : [ {
+      "name" : "18772-MainThread",
+      "children" : [ {
+        "name" : "test_1",
+        "uid" : "1fb6744a9b813eaf",
+        "parentUid" : "10e5b77dbb983b47da792975d60e61ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603085206941,
+          "stop" : 1603085206942,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_2",
+        "uid" : "d3e78f47d0bb914",
+        "parentUid" : "10e5b77dbb983b47da792975d60e61ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603085206945,
+          "stop" : 1603085206945,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "10e5b77dbb983b47da792975d60e61ee"
+    }, {
+      "name" : "4372-MainThread",
+      "children" : [ {
+        "name" : "test_admin_login[tanxiumei-111111-南通智能污水处理站监控系统]",
+        "uid" : "4a1ce3a2e2f2a5d0",
+        "parentUid" : "f4268fa7d90d6fda01735843d5144e76",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603086747927,
+          "stop" : 1603086755153,
+          "duration" : 7226
+        },
+        "flaky" : false,
+        "parameters" : [ "'南通智能污水处理站监控系统'", "'111111'", "'tanxiumei'" ]
+      } ],
+      "uid" : "f4268fa7d90d6fda01735843d5144e76"
+    } ],
+    "uid" : "79bf919373968851421e6c3eb1c35c2e"
+  } ]
+}

@@ -1,0 +1,3 @@
+"Status","Name","Duration in ms","Description"
+"passed","test6.TestEditPage#test_1","1","用例描述：先登录，再去执行xxx"
+"passed","test6.TestEditPage#test_2","0","用例描述：先登录，再去执行yyy"

@@ -2,10 +2,11 @@ import pickle
 import random
 import string
 import time
-from lib.ShowapiRequest import ShowapiRequest
 
 from PIL import Image
 import os
+
+from wushuiPro.lib.ShowapiRequest import ShowapiRequest
 
 
 def get_logger():
@@ -85,3 +86,5 @@ def load_cookie(driver, path):
         cookies = pickle.load(cookiesfile)
         for cookie in cookies:
             driver.add_cookie(cookie)
+if __name__ == '__main__':
+    print(gen_random_str())

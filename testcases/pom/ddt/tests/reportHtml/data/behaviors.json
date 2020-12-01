@@ -1,0 +1,61 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "编辑页面",
+    "children" : [ {
+      "name" : "这是一个xxx的用例",
+      "children" : [ {
+        "name" : "test_1",
+        "uid" : "1fb6744a9b813eaf",
+        "parentUid" : "fb02c277d722fc3613aae0cad5f7d1be",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603085206941,
+          "stop" : 1603085206942,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fb02c277d722fc3613aae0cad5f7d1be"
+    }, {
+      "name" : "打开a页面",
+      "children" : [ {
+        "name" : "test_2",
+        "uid" : "d3e78f47d0bb914",
+        "parentUid" : "2e2ca973b7116d00ce060c1259a4b26d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603085206945,
+          "stop" : 1603085206945,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2e2ca973b7116d00ce060c1259a4b26d"
+    } ],
+    "uid" : "3e6ebb7283af629a2041f3f44bb2b5ef"
+  }, {
+    "name" : "登录页面",
+    "children" : [ {
+      "name" : "这是登录的测试用例",
+      "children" : [ {
+        "name" : "test_admin_login[tanxiumei-111111-南通智能污水处理站监控系统]",
+        "uid" : "4a1ce3a2e2f2a5d0",
+        "parentUid" : "db2b5562215be49a2bf9120290ba3aef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603086747927,
+          "stop" : 1603086755153,
+          "duration" : 7226
+        },
+        "flaky" : false,
+        "parameters" : [ "'南通智能污水处理站监控系统'", "'111111'", "'tanxiumei'" ]
+      } ],
+      "uid" : "db2b5562215be49a2bf9120290ba3aef"
+    } ],
+    "uid" : "61bcda7215eb52afed47c0f6d8cd25a5"
+  } ]
+}

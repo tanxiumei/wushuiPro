@@ -41,10 +41,8 @@ class TestAdminLogin(object):
         else:
             WebDriverWait(self.driver, 5).until(EC.alert_is_present())
             alert = self.driver.switch_to.alert
-
             assert alert.text == expected
             alert.accept()
-
             sleep(5)
 
 

@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-class Te1stNaxinUserLogin(object):
+class TestNaxinUserLogin(object):
     def setup_class(self):
         self.driver = webdriver.Chrome()
         self.driver.get('http://10.100.103.204:10001/dist/index.html#/login')
@@ -42,9 +42,9 @@ class Te1stNaxinUserLogin(object):
     '''
         # 测试用户登录成功
 
-    def testcart(self):
+    def test_cart(self):
         # 用户名为空
-        username = 'wangzi'
+        username = 'tanxiumei'
         pwd = '111111'
         expected = '南通智能污水处理站监控系统'
 
@@ -62,3 +62,6 @@ class Te1stNaxinUserLogin(object):
         print(111222)
         assert self.driver.title == expected
         sleep(5)
+
+if __name__ == '__main__':
+    pytest.main(['-sv','naxin_user_login.py'])

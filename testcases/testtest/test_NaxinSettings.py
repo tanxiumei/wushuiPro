@@ -22,35 +22,7 @@ from testcases.basic.naxin_user_login import NaxinUserLogin
 import random
 
 #获取csv文件里的内容，返回一个包含list的list
-def getData():
-    setDate()
-    csvFile = 'testData.csv'
-    print(csvFile)
-    with open(csvFile) as f:
-        rows = csv.reader(f)
-        myData = []
-        temp = []
-        for row in rows:
-            temp.extend(row)
-            myData.append(temp)
-            temp = []
-    return myData
-def setDate():
-    faker = Faker(locale='zh_CN')
-
-    file = open('testData.csv', 'w', newline='')
-    fwrite = csv.writer(file)
-    p = Pinyin()
-    faker1 = Faker()
-    for i in range(1, 2):
-        tanname = faker.name()
-        phoneNum = faker.phone_number()
-        username = faker1.first_name()
-        password = '111111'
-        picFile = 'C:/Users/dell/Pictures/mingxing/44.png'
-        fwrite.writerow([tanname, phoneNum, username, password, picFile])
-    file.close()
-
+from wushuiPro.util.ctrExcelFile import setDate, getData
 
 class TestNaxinSettings(object):
     #def setup_class(self,userlogin):
@@ -67,7 +39,7 @@ class TestNaxinSettings(object):
         sleep(3)
 
     #@pytest.mark.skip(reason="调试")
-    @pytest.mark.parametrize('list2',getData())
+    @pytest.mark.parametrize('list2',getData('testData.csv'))
     def test_AddUser(self,userlogin,list2):
         self.login = userlogin
         self.login.driver.refresh()
@@ -102,8 +74,9 @@ class TestNaxinSettings(object):
         #定位密码
         self.login.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div[2]/form/div[5]/div/div[1]/input').send_keys(password)
         #上传头像
-        self.login.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div[2]/form/div[6]/div/div/div')
+        #self.login.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div[2]/form/div[6]/div/div/div')
         self.login.driver.find_element_by_name("file").send_keys(picFile)
+        sleep(5)
         #确定提交
         self.login.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div[3]/div/button[2]').click()
         #提交成功之后，获取页面提示框信息

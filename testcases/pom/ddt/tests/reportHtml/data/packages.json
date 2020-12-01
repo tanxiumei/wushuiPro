@@ -1,0 +1,49 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test6",
+    "children" : [ {
+      "name" : "test_1",
+      "uid" : "1fb6744a9b813eaf",
+      "parentUid" : "47eaa1c0c8e3677e7db9624fba465cca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1603085206941,
+        "stop" : 1603085206942,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_2",
+      "uid" : "d3e78f47d0bb914",
+      "parentUid" : "47eaa1c0c8e3677e7db9624fba465cca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1603085206945,
+        "stop" : 1603085206945,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "47eaa1c0c8e3677e7db9624fba465cca"
+  }, {
+    "name" : "test_naxinUser",
+    "children" : [ {
+      "name" : "test_admin_login[tanxiumei-111111-南通智能污水处理站监控系统]",
+      "uid" : "4a1ce3a2e2f2a5d0",
+      "parentUid" : "785c2ae2af1507de7d0560955b34f934",
+      "status" : "passed",
+      "time" : {
+        "start" : 1603086747927,
+        "stop" : 1603086755153,
+        "duration" : 7226
+      },
+      "flaky" : false,
+      "parameters" : [ "'南通智能污水处理站监控系统'", "'111111'", "'tanxiumei'" ]
+    } ],
+    "uid" : "785c2ae2af1507de7d0560955b34f934"
+  } ]
+}

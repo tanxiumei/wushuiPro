@@ -1,0 +1,41 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "编辑页面",
+    "children" : [ {
+      "name" : "这是一个xxx的用例",
+      "children" : [ {
+        "name" : "test_1",
+        "uid" : "ccd4e52d12deb33c",
+        "parentUid" : "fb02c277d722fc3613aae0cad5f7d1be",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603348536720,
+          "stop" : 1603348536721,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fb02c277d722fc3613aae0cad5f7d1be"
+    }, {
+      "name" : "打开a页面",
+      "children" : [ {
+        "name" : "test_2",
+        "uid" : "b64d6d1d3c61c431",
+        "parentUid" : "2e2ca973b7116d00ce060c1259a4b26d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1603348536723,
+          "stop" : 1603348536723,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2e2ca973b7116d00ce060c1259a4b26d"
+    } ],
+    "uid" : "3e6ebb7283af629a2041f3f44bb2b5ef"
+  } ]
+}
